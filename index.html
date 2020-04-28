@@ -40,7 +40,7 @@
 			console.log(photobox);
 
 			function handleCombo(e) {
-				console.log(e.key);
+				console.log(e.keyCode);
 
 				const secretPassword = "dudi";
 				if (e.key === secretPassword[counter]) {
@@ -57,7 +57,7 @@
 					if (e.key === secretPassword[counter]) counter++;
 				}
 			}
-			window.addEventListener("keydown", handleCombo);
+			document.addEventListener("keydown", handleCombo);
 		</script>
 	</body>
 </html>
