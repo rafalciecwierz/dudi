@@ -26,8 +26,7 @@
 				otwarta. A Ty moja droga, każdego kroku jesteś warta! 😊 Sto
 				latek! 😘!
 			</h2>
-			<p class="secret">wpisz na klawiaturze litery d u d i kilka razy</p>
-			<input type="text" />
+			<p class="secret">kliknij na mnie wiele razy</p>
 			<div class="photo">
 				<img src="./assets/stw.jpg" alt="sexygirl" />
 			</div>
@@ -37,6 +36,7 @@
 			const photobox = document.querySelector(".photo");
 			const container = document.querySelector(".container");
 			const body = document.querySelector("body");
+			const secret = document.querySelector(".secret");
 			console.log(photobox);
 
 			function handleCombo(e) {
@@ -57,6 +57,12 @@
 					if (e.key === secretPassword[counter]) counter++;
 				}
 			}
+			secret.addEventListener("click", () => {
+				cornify_add();
+				photobox.style.display = "block";
+				container.style.boxShadow = "10px 10px 1000px black";
+				body.style.backgroundColor = "#eb2e64";
+			});
 			document.addEventListener("keydown", handleCombo);
 		</script>
 	</body>
