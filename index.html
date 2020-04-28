@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>SECRET PASSWORD IS DUDI</title>
+		<script
+			type="text/javascript"
+			src="http://www.cornify.com/js/cornify.js"
+		></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style/style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="heading">
+				Wszystkiego Najlepszego "DUDI"!<br />Spełnienia wszystkich
+				marzeń!<br />
+			</h1>
+			<h2 class="heading">
+				Chce z całego serca życzyć Tobie wszystkiego co najlepsze! Abyś
+				odnalazła swoją drogę i wspaniałą osobę, z którą tą drogę
+				przejdziesz! Dużo sił abyś mogła spokojnie pokonać te przeszkody
+				przed Tobą. Dużo frajdy przy zbieganiu z tych przeszkód w drodze
+				na dół. Wytrwałości aby ten dół przeczekać. No i miłości bo z
+				nią nie można czekać! Pamiętaj, że droga przed Tobą zawsze jest
+				otwarta. A Ty moja droga, każdego kroku jesteś warta! 😊 Sto
+				latek! 😘
+			</h2>
+			<p class="secret">wpisz na klawiaturze litery d u d i kilka razy</p>
+			<div class="photo">
+				<img src="./assets/stw.jpg" alt="sexygirl" />
+			</div>
+		</div>
+		<script>
+			let counter = 0;
+			const photobox = document.querySelector(".photo");
+			const container = document.querySelector(".container");
+			const body = document.querySelector("body");
+			console.log(photobox);
+
+			function handleCombo(e) {
+				console.log(e.key);
+
+				const secretPassword = "dudi";
+				if (e.key === secretPassword[counter]) {
+					counter++;
+					if (counter === secretPassword.length) {
+						cornify_add();
+						photobox.style.display = "block";
+						container.style.boxShadow = "10px 10px 1000px black";
+						body.style.backgroundColor = "#eb2e64";
+						counter = 0;
+					}
+				} else {
+					counter = 0;
+					if (e.key === secretPassword[counter]) counter++;
+				}
+			}
+			window.addEventListener("keyup", handleCombo);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    border-radius: 50px;
+    padding: 4rem;
+
+    width: 800px;
+    background-color: #fff;
+}
+
+.heading {
+    text-align: center;
+}
+.photo {
+    width: 100%;
+    display: none;
+}
+.photo img {
+    width: 100%;
+}
+
+.secret {
+    font-size: 4px;
+}
